@@ -402,6 +402,63 @@ Deux idées phares de l'informatique:
 	\end{itemize}
 \end{slide}
 \subsection{De la structuration}
+\begin{frame}
+	\begin{itemize}
+		\item Acte n°1 de tout informaticien : penser la structure des données.
+		\item Exemple : faire une liste des ingrédients d'une recette de cuisine.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\begin{columns}[T]
+	\begin{column}{0.25\textwidth}<.->
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{En vrac}
+		3 kilos de patates ; 5 choux rouges ; radis : une botte
+		\end{exampleblock}	
+	\end{column}
+	
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Ingrédient/Qt.}
+			\begin{itemize}
+				\item Patates : 3~kg.
+				\item Choux rouges : 5.
+				\item Radis : 1~botte.
+			\end{itemize}
+		\end{exampleblock}
+	\end{column}
+	
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Ing./Unit./Qt.}
+			\begin{itemize}
+				\item Patates / 3 / kg
+				\item Choux rouges / 5 / \~\
+				\item Radis / 1 / botte
+			\end{itemize}
+		\end{exampleblock}
+	\end{column}
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Avec deux listes}
+			\begin{itemize}
+				\item Patates : 3
+				\item Choux rouges : 5
+				\item Radis : 1
+			\end{itemize}
+			\hrule width \textwidth
+			\begin{itemize}
+				\item Patates : kg
+				\item Choux rouges : \~\
+				\item Radis : botte
+			\end{itemize}
+		\end{exampleblock}
+	\end{column}
+\end{columns}
+\end{frame}
+
 \subsubsection{Des langages de descriptions}
 \subsubsection{Des gestionnaires de base de données}
 
