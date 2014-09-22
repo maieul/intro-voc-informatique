@@ -1,6 +1,6 @@
 \documentclass{beamer}
 \usepackage[nobiblatex]{beamer-standrews}
-
+\usepackage{xcolor,amsmath}
 \author{Maïeul Rouquette}
 \date{1\textsuperscript{er} décembre 2014}
 \title{Une introduction au vocabulaire de l'informatique}
@@ -12,8 +12,18 @@
 \usepackage{graphicx}
 \graphicspath{{img/}}
 
+% Diverses commandes utiles pour cet exposé
 \newcommand{\forme}[1]{\enquote{#1}}
 \newcommand{\formeenglish}[1]{\forme{\textenglish{#1}}}
+
+\definecolor{0}{named}{violet}
+\definecolor{1}{named}{brown}
+\definecolor{2}{named}{red}
+\definecolor{3}{named}{blue}
+\newcommand{\puissance}[2]{%
+	{\color{#1}%
+	#2}%
+}
 
 \begin{document}
 
@@ -231,9 +241,117 @@ Deux idées phares de l'informatique:
 				\item Peuvent, pour des raisons juridico-commerciales, être limités dans la possibilité \emph{effective} de modifier les instructions (ex : \texbf{Apple Store}).
 			\end{itemize}
 	\end{itemize}
-\end{frame}
+\end{slide}
 \section{Décrire les données}
 \subsection{Des nombres}
+
+\begin{slide}
+	\begin{itemize}
+		\item Aujourd'hui les données que manipulent la machine sont \textbf{des nombres}
+		\item Manipulées sous forme \texbf{binaire} pour des contraintes matérielless:
+			\begin{itemize}
+				\item Le courant passe ou ne passe pas.
+				\item Le métal est chargé ou non chargé.
+				\item Le plastique est gravé ou non gravé.
+			\end{itemize}  
+		\item L'informaticien lui manipule tous types de données en fonction du langage qu'il utilise:
+			\begin{itemize}
+				\item Nombres entiers.
+				\item Chaînes de caractères.
+				\item Tableau de données.
+				\item etc.
+			\end{itemize}
+	\end{itemize}
+\end{slide}
+
+\begin{slide}
+\begin{exampleblock}{Notation décimale}
+\begin{align*}
+	% Première ligne d'exemple
+	\puissance{3}{4}%
+	\puissance{2}{3}%
+	\puissance{1}{2}%
+	\puissance{0}{5} %
+	&= 
+	\puissance{3}{4000} &+&\  
+	\puissance{2}{300} &+&\  
+	\puissance{1}{20} &+&\  
+	\puissance{0}{5}\\
+	%
+	% Seconde ligne d'exemple
+	\only<+->{%
+		&=
+		\puissance{3}{4 \times 1000}
+		&+&\  
+		\puissance{2}{3 \times 100} 
+		&+&\  
+		\puissance{1}{2 \times 10} 
+		&+&\  
+		\puissance{0}{5 \times 1}
+		} 
+		\\
+	%
+	% Troisième ligne d'exemple
+    \only<+->{%
+    	&= 
+		\puissance{3}{4 \times 10^3} 
+		&+&\  
+		\puissance{2}{3 \times 10^2} 
+		&+&\  
+		\puissance{1}{2 \times 10^1} 
+		&+&\  
+		\puissance{0}{5 \times 10^0}
+		}
+		\\
+\end{align*}
+
+\end{exampleblock}
+
+\begin{exampleblock}{Notation binaire}
+\begin{align*}
+	% Première ligne d'exemple
+	\puissance{3}{1}%
+	\puissance{2}{0}%
+	\puissance{1}{1}%
+	\puissance{0}{0}%
+	&\iff 
+	\puissance{3}{1 \times 2^3} 
+	&+&\  
+	\puissance{2}{0 \times 2^2} 
+	&+&\  
+	\puissance{1}{1 \times 2^1} 
+	&+&\  
+	\puissance{0}{0 \times 2^0} 
+	\\
+	%Seconde ligne d'exemple
+	\only<+->{%
+		&\iff 
+		\puissance{3}{1 \times 8} 
+		&+&\  
+		\puissance{2}{0 \times 4} 
+		&+&\  
+		\puissance{1}{1 \times 2} 
+		&+&\  
+		\puissance{0}{0 \times 1}
+		}
+		\\	
+	% Troisième ligne d'exemple
+	\only<+->{%
+		&\iff 
+		\puissance{3}{8} 
+		&+&\  
+		\puissance{2}{0} 
+		&+&\  
+		\puissance{1}{2} 
+		&+&\  
+		\puissance{0}{0}
+		}
+		\\
+	% Quatrième ligne d'exemple																	
+	&\only<+->{\iff 10}
+\end{align*}
+\end{exampleblock}\end{slide}
+
 \subsection{De l'ASCII à l'UTF-8}
 \subsection{De la structuration}
 \subsubsection{Des langages de descriptions}
