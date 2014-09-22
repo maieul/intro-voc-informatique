@@ -369,7 +369,38 @@ Deux idées phares de l'informatique:
 \end{slide}
 
 \subsection{De l'ASCII à l'UTF-8}
-
+\begin{slide}
+	\begin{itemize}
+		\item Manipuler des chaînes de caractères est un des usages courants de l'informatique.
+		\item D'autant plus qu'il est plus facile pour un humain d'utiliser des mots que des nombres pour :
+			\begin{itemize}
+				\item Représenter les données.
+				\item Représenter les instructions.
+			\end{itemize}
+	\end{itemize}
+\end{slide}
+\begin{slide}
+	\begin{itemize}
+		\item Définir une liste de caractères : \textbf{jeu de caractères}.
+		\item Attribuer un nombre différent à chaque caractère : \texbf{jeu de caractères codés}.
+		\item Définir comment on stocke ces caractères : \texbf{codages des caractères}
+	\end{itemize}
+\end{slide}
+\begin{slide}
+	\begin{itemize}
+		\item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : codage de caractères:
+			\begin{itemize}
+				\item Met fin à la multiplication des précédents codages.
+				\item Mais ne permet que de noter l'américain et les caractères informatiques de base (pas d'accents)
+			\end{itemize}
+		\item Multiplication des encodages pour les langues non anglo-saxonnes.
+		\item \textbf{Unicode} (1993) : \textbf{jeu de caractères codés}
+			\begin{itemize}
+				\item Vise à couvrir tous les caractères anciens et modernes, y compris ceux non encore existants.
+				\item Peut s'implémenter sous différents \textbf{codages} : UTF-8, UTF-16, UTF-32.
+			\end{itemize}
+	\end{itemize}
+\end{slide}
 \subsection{De la structuration}
 \subsubsection{Des langages de descriptions}
 \subsubsection{Des gestionnaires de base de données}
