@@ -1,0 +1,11 @@
+<ingredients>
+    <ingredient nom="patates">3</ingredient>
+    <ingredient nom="choux rouges">5</ingredient>
+    <ingredient nom="radis">1</ingredient>
+</ingredients>
+
+<unites-ingredients>
+    <unite ingredient="patates">kg</unite>
+    <unite ingredient="choux rouges" />
+    <unite ingredient="radis">botte</unite>
+</unites-ingredients>

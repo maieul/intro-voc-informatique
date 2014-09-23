@@ -1,0 +1,12 @@
+{
+  "unites ingredients": {
+    "radis": "botte", 
+    "patates": "kg", 
+    "choux rouges": null
+  }, 
+  "ingredients": {
+    "radis": 1, 
+    "patates": 3, 
+    "choux rouges": 5
+  }
+}
