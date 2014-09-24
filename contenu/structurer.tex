@@ -1,0 +1,344 @@
+\section{Décrire les données}
+\subsection{Des nombres}
+
+\begin{slide}
+	\begin{itemize}
+		\item Aujourd'hui les données que manipulent la machine sont \textbf{des nombres}
+		\item Manipulées sous forme \textbf{binaire} pour des contraintes matérielless:
+			\begin{itemize}
+				\item Le courant passe ou ne passe pas.
+				\item Le métal est chargé ou non chargé.
+				\item Le plastique est gravé ou non gravé.
+			\end{itemize}  
+	\end{itemize}
+\end{slide}
+
+\begin{slide}
+\begin{exampleblock}{Notation décimale}
+\begin{align*}
+	% Première ligne d'exemple
+	\puissance{3}{4}%
+	\puissance{2}{3}%
+	\puissance{1}{2}%
+	\puissance{0}{5} %
+	&= 
+	\puissance{3}{4000} &+&\  
+	\puissance{2}{300} &+&\  
+	\puissance{1}{20} &+&\  
+	\puissance{0}{5}\\
+	%
+	% Seconde ligne d'exemple
+	\only<+->{%
+		&=
+		\puissance{3}{4 \times 1000}
+		&+&\  
+		\puissance{2}{3 \times 100} 
+		&+&\  
+		\puissance{1}{2 \times 10} 
+		&+&\  
+		\puissance{0}{5 \times 1}
+		} 
+		\\
+	%
+	% Troisième ligne d'exemple
+    \only<+->{%
+    	&= 
+		\puissance{3}{4 \times 10^3} 
+		&+&\  
+		\puissance{2}{3 \times 10^2} 
+		&+&\  
+		\puissance{1}{2 \times 10^1} 
+		&+&\  
+		\puissance{0}{5 \times 10^0}
+		}
+		\\
+\end{align*}
+
+\end{exampleblock}
+
+\begin{exampleblock}{Notation binaire}
+\begin{align*}
+	% Première ligne d'exemple
+	\puissance{3}{1}%
+	\puissance{2}{0}%
+	\puissance{1}{1}%
+	\puissance{0}{0}%
+	&\iff 
+	\puissance{3}{1 \times 2^3} 
+	&+&\  
+	\puissance{2}{0 \times 2^2} 
+	&+&\  
+	\puissance{1}{1 \times 2^1} 
+	&+&\  
+	\puissance{0}{0 \times 2^0} 
+	\\
+	%Seconde ligne d'exemple
+	\only<+->{%
+		&\iff 
+		\puissance{3}{1 \times 8} 
+		&+&\  
+		\puissance{2}{0 \times 4} 
+		&+&\  
+		\puissance{1}{1 \times 2} 
+		&+&\  
+		\puissance{0}{0 \times 1}
+		}
+		\\	
+	% Troisième ligne d'exemple
+	\only<+->{%
+		&\iff 
+		\puissance{3}{8} 
+		&+&\  
+		\puissance{2}{0} 
+		&+&\  
+		\puissance{1}{2} 
+		&+&\  
+		\puissance{0}{0}
+		}
+		\\
+	% Quatrième ligne d'exemple																	
+	&\only<+->{\iff 10}
+\end{align*}
+\end{exampleblock}\end{slide}
+
+\begin{slide}
+	\begin{itemize}
+		\item 1 unité minimale d'information (0/1) = 1 \textbf{bit}.
+		\item 8 \textbf{bits} forme 1 \textbf{octet}.
+		\item 1000~\textbf{octets} forment 1~\textbf{ko}
+		\item … bien que certains logiciels utilisent encore l'ancien usage 1 ko = 1024 octets.
+	\end{itemize}
+\end{slide}
+
+
+\begin{slide}
+	\begin{itemize}
+		\item La \textbf{machine} manipule des \textbf{nombres}.
+		\item L'\textbf{informaticien} manipule lui d'autres \textbf{types de données}:
+		\begin{itemize}
+			\item Nombres.
+			\item Chaînes de caractères.
+			\item Tableaux de données.
+			\item etc. Chaque langage de programmation propose ses propres types de données.
+		\end{itemize}
+	\end{itemize}
+\end{slide}
+
+\subsection{De l'ASCII à l'Unicode}
+\begin{slide}
+	\begin{itemize}
+		\item Manipuler des chaînes de caractères est un des usages courants de l'informatique.
+		\item D'autant plus qu'il est plus facile pour un humain d'utiliser des mots que des nombres pour :
+			\begin{itemize}
+				\item Représenter les données.
+				\item Représenter les instructions.
+			\end{itemize}
+	\end{itemize}
+\end{slide}
+\begin{slide}
+	\begin{itemize}
+		\item Définir une liste de caractères : \textbf{jeu de caractères}.
+		\item Attribuer un nombre différent à chaque caractère : \textbf{jeu de caractères codés}.
+		\item Définir comment on stocke ces caractères : \textbf{codages des caractères}
+	\end{itemize}
+\end{slide}
+\begin{slide}
+	\begin{itemize}
+		\item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : codage de caractères:
+			\begin{itemize}
+				\item Met fin à la multiplication des précédents codages.
+				\item Mais ne permet que de noter l'américain et les caractères informatiques de base (pas d'accents)
+			\end{itemize}
+		\item Multiplication des encodages pour les langues non anglo-saxonnes.
+		\item \textbf{Unicode} (1993) : \textbf{jeu de caractères codés}
+			\begin{itemize}
+				\item Vise à couvrir tous les caractères anciens et modernes, y compris ceux non encore existants.
+				\item Peut s'implémenter sous différents \textbf{codages} : UTF-8, UTF-16, UTF-32.
+			\end{itemize}
+	\end{itemize}
+\end{slide}
+\subsection{De la structuration}
+\begin{frame}
+	\begin{itemize}
+		\item Acte n°1 de tout informaticien : penser la structure des données.
+		\item Exemple : faire une liste des ingrédients d'une recette de cuisine.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+
+\begin{columns}[T]
+	\begin{column}{0.25\textwidth}<.->
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{En vrac}
+		3 kilos de patates ; 5 choux rouges ; radis : une botte
+		\end{exampleblock}	
+	\end{column}
+	
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Ingrédient/Qt.}
+			\begin{itemize}
+				\item Patates : 3~kg.
+				\item Choux rouges : 5.
+				\item Radis : 1~botte.
+			\end{itemize}
+		\end{exampleblock}
+	\end{column}
+	
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Ing./Unit./Qt.}
+			\begin{itemize}
+				\item Patates / 3 / kg
+				\item Choux rouges / 5 / $\varnothing$\
+				\item Radis / 1 / botte
+			\end{itemize}
+		\end{exampleblock}
+	\end{column}
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Avec deux listes}
+			\begin{itemize}
+				\item Patates : 3
+				\item Choux rouges : 5
+				\item Radis : 1
+			\end{itemize}
+			\hrule width \textwidth
+			\begin{itemize}
+				\item Patates : kg
+				\item Choux rouges : $\varnothing$\
+				\item Radis : botte
+			\end{itemize}
+		\end{exampleblock}
+	\end{column}
+\end{columns}
+\end{frame}
+
+\subsubsection{Des langages de descriptions}
+
+\begin{frame}
+	\begin{itemize}
+		\item Une fois conçu la \texbf{structure des données} l'informaticien va pouvoir les \texbf{encoder} (ou les faire encoder…).
+		\item Il va pour cela utiliser un \texbf{langage de description}.
+		\item Qu'il choisira en fonction de critères tels que:
+			\begin{itemize}
+				\item Les outils disponibles pour manipuler ces langages.
+				\item La verbosité du langage.
+				\item La diffusion du langage.
+				\item L'inter-opérabilité qu'il souhaite avec d'autres outils.
+				\item etc.
+				\item Sa propre formation et ses a-prioris.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\begin{columns}[T]
+	\begin{column}{0.25\textwidth}<.->
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{Directement dans le langage de programmation (ici Python)}
+			\inputminted{python}{exemples-structure/python.py}
+		\end{exampleblock}
+	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
+		\begin{exampleblock}{En \forme{eXtensible Markup Language} (XML)}
+			\inputminted{exemples-structures/xml.xml}
+		\end{exampleblock}
+	\end{column}
+	\begin{column}{0.25\textwidth}
+		\begin{exampleblock}{En \forme{YAML Ain't Markup Language}}
+			\inputminted{exemples-structures/yaml.yaml}
+		\end{exampleblock}
+	\end{column}
+	\begin{column}{0.25\textwidth}
+		\begin{exampleblock}{En \forme{JavaScript Object Notation} (JSON)}
+			\inputminted{exemples-structures/json.json}
+		\end{exampleblock}
+	\end{column}
+\end{columns}
+\end{frame}
+\subsubsection{Des gestionnaires de base de données}
+\begin{frame}
+	\begin{itemize}
+		\item On peut mettre des \textbf{données} dans des \texbf{fichiers} qu'on décrypte ensuite.
+		\item Mais on peut aussi \texbf{faire abstraction} des fichiers pour ne se focaliser que sur les \texbf{données} et leurs \texbf{relations}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item On utilise alors un \texbf{gestionnaire de bases de données}.
+		\item Qu'on manipule avec un \texbf{langage spécifique}.
+		\item Langage commun et standardisé : \enquote{Structured Query Language} (SQL).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+				\item Langage déclaratif.
+				\item Pertinents dans certains contextes notamment quand :
+				\begin{itemize}
+					\item Les relations entres les données sont simples et peut variantes.
+					\item Les relations entre les données ne sont pas principalement hiérarchiques.
+					\item On cherche plus à obtenir des données en fonctions de leur relations qu'à effectuer des manipulations dessus.
+					\item On connaît les contraintes des relations entre données (unicités…)
+				\end{itemize}
+	\end{itemize}
+	
+
+\begin{frame}
+	
+	\beamerdefaultoverlayspecification{}
+	\scriptsize
+	\begin{exampleblock}{Tableaux}
+	\only<+->{\begin{tabular}{|l|l|c|}
+	\hline 
+		\multicolumn{3}{|c|}{\titretableau{Ingredients\_recettes}}\\
+	\hline
+		\titrecolonne{Recette} & \titrecolonne{Ingredients} &  \titrecolonne{Quantite} 
+		\\
+	\hline
+		Bougli-boulga 	&	Patates 		& 3 \\
+		Bougli-boulga	&	Choux rouges 	& 5 \\
+		Bougli-boulga	& 	Radis 			& 1 \\
+	\hline
+	\end{tabular}
+	}
+
+
+	\only<+->{
+	\begin{tabular}{|l|l|}
+	\hline 
+		\multicolumn{2}{|c|}{\titretableau{Unites\_ingredients}}\\
+	\hline
+		\titrecolonne{Ingredient} 	& \titrecolonne{Unite} \\
+	\hline
+		Patates					& kg \\
+		Choux rouges			& \~\ \\
+		Radis					& botte \\
+		\hline
+	\end{tabular}
+	}
+
+
+	\only<+->{\begin{tabular}{|l|c|}
+		\hline \multicolumn{2}{|c|}{\titretableau{Recettes}}\\
+	\hline
+		\titrecolonne{Nom} 
+		& 
+		\titrecolonne{Temps} 
+		\\
+	\hline
+	Bougli-boulga & 5 mn\\
+	\hline
+	\end{tabular}
+	}
+	\end{exampleblock}
+	\only<+->{
+	\begin{exampleblock}{Requete}
+		\inputminted{sql}{exemple-structure/sql.sql}
+	\end{exampleblock}
+	}
+\end{frame}
+\end{frame}
