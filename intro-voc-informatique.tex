@@ -503,6 +503,90 @@ Deux idées phares de l'informatique:
 \end{columns}
 \end{frame}
 \subsubsection{Des gestionnaires de base de données}
+\begin{frame}
+	\begin{itemize}
+		\item On peut mettre des \textbf{données} dans des \texbf{fichiers} qu'on décrypte ensuite.
+		\item Mais on peut aussi \texbf{faire abstraction} des fichiers pour ne se focaliser que sur les \texbf{données} et leurs \texbf{relations}.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item On utilise alors un \texbf{gestionnaire de bases de données}.
+		\item Qu'on manipule avec un \texbf{langage spécifique}.
+		\item Langage commun et standardisé : \enquote{Structured Query Language} (SQL).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+				\item Langage déclaratif.
+				\item Pertinents dans certains contextes notamment quand :
+				\begin{itemize}
+					\item Les relations entres les données sont simples et peut variantes.
+					\item Les relations entre les données ne sont pas principalement hiérarchiques.
+					\item On cherche plus à obtenir des données en fonctions de leur relations qu'à effectuer des manipulations dessus.
+					\item On connaît les contraintes des relations entre données (unicités…)
+				\end{itemize}
+	\end{itemize}
+	
+
+\begin{frame}
+	
+	\beamerdefaultoverlayspecification{}
+	\scriptsize
+	\begin{exampleblock}{Tableaux}
+	\only<+->{\begin{tabular}{|l|l|c|}
+	\hline 
+		\multicolumn{3}{|c|}{\titretableau{Ingredients\_recettes}}\\
+	\hline
+		\titrecolonne{Recette} & \titrecolonne{Ingredients} &  \titrecolonne{Quantite} 
+		\\
+	\hline
+		Bougli-boulga 	&	Patates 		& 3 \\
+		Bougli-boulga	&	Choux rouges 	& 5 \\
+		Bougli-boulga	& 	Radis 			& 1 \\
+	\hline
+	\end{tabular}
+	}
+
+
+	\only<+->{
+	\begin{tabular}{|l|l|}
+	\hline 
+		\multicolumn{2}{|c|}{\titretableau{Unites\_ingredients}}\\
+	\hline
+		\titrecolonne{Ingredient} 	& \titrecolonne{Unite} \\
+	\hline
+		Patates					& kg \\
+		Choux rouges			& \~\ \\
+		Radis					& botte \\
+		\hline
+	\end{tabular}
+	}
+
+
+	\only<+->{\begin{tabular}{|l|c|}
+		\hline \multicolumn{2}{|c|}{\titretableau{Recettes}}\\
+	\hline
+		\titrecolonne{Nom} 
+		& 
+		\titrecolonne{Temps} 
+		\\
+	\hline
+	Bougli-boulga & 5 mn\\
+	\hline
+	\end{tabular}
+	}
+	\end{exampleblock}
+	\only<+->{
+	\begin{exampleblock}{Requete}
+		\inputminted{sql}{exemple-structure/sql.sql}
+	\end{exampleblock}
+	}
+\end{frame}
+\end{frame}
+
 
 \section{Manipuler les données}
 \subsection{Encore du binaire}
