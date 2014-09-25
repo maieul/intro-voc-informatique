@@ -1,0 +1,71 @@
+\section{Communiquer entre ordinateur} % Prendre le modèle TCP/IP en 4 couches, qu'on simplifie en 3 le but n'est pas de faire un cours sur le sujet https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet
+\begin{frame}
+	\begin{itemize}
+		\item Un réseau informatique est ensemble d'équipement reliés entre eux pour échanger de l'information.
+		\item Le modèle \texbf{OSI}\footnote{\forme{Open System Interconnexion}} propose un standard en \textbf{7 couche}.
+		\item Mais on simplifiera ici à \texbf{3 couches}.
+		
+	\end{itemize}
+\end{frame}
+\subsection{Un support physique}
+
+\begin{frame}
+	\begin{itemize}
+		\item Deux humains qui communiquent utilise un support physique pour le faire : 			\begin{itemize}
+				\item Son. 
+				\item Signaux de fumées.
+				\item Gestes.
+				\item etc.
+			\end{itemize}
+		\item Les ordinateurs de même:
+			\begin{itemize}
+				\item Câbles métalliques, notamment cuivres.
+				\item Ondes électromagnétiques (Wifi, 3G etc.).
+				\item Fibre optique. % Note : la lumière est une onde élèctromagnétique de fréquence particulière, mais passons.
+			\end{itemize} 
+		\item Il existe des \textbf{normes} décrivant l'usage de ces supports.
+		\item Notamment les normes \textbf{ethernet}.
+	\end{itemize}
+\end{frame}
+\subsection{Mettre en réseau}
+\begin{frame}
+	\begin{itemize}
+		\item Pour s'avoir à qui on écrit on utilise une adresse.
+		\item La poste a des règles internes d'acheminement du courrier.
+		\item Le système le plus répandu aujourd'hui est \texbf{Internet Protocol} (1980).
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item On peut utiliser IP sans Internet : réseaux locaux.
+		\item L'interconnexion des \texbf{réseaux locaux} forme \texbf{Internet}.
+		\item IP se base sur notion de \texbf{paquets}:
+			\begin{itemize}
+				\item On divise les données en paquets.
+				\item On ne sait pas d'avance par où passe les paquets.
+				\item Se caractérise notamment par l'aspect \texbf{décentralisé}.
+			\end{itemize}
+		\item \formeenglish{Internet Corporation for Assigned Names and Numbers} attribut les adresses IP:
+			\begin{itemize}
+				\item IPv4 : \num{4,3 94 967 296} : épuisées.
+				\item IPv6 : \num{3,4e38} : \SI{3}{\percent}?
+			\end{itemize}
+	\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Pour éviter de retenir les address IP ont a inventé (1983) le \texbf{nom de domaines}.
+		\item Les domaines fonctionnent de manière hiérarchiques.
+		\begin{itemize}
+			\item[Premier niveau (TLD)] : extensions (\verb+.fr+, \verb+.org+)
+			\item[Second niveau] : domaines (\verb+wikipedia.org+, \verb+unil.ch+)
+			\item[Troisième niveau] : sous-domaine (\verb+fr.wikipedia.org+)
+			\item etc.
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{Qu'échange-t-on?}% Des fichiers, des courriers, des fichiers en lien hypertexte. C'est ici que se place le web
