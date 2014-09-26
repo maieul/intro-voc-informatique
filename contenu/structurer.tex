@@ -3,8 +3,8 @@
 
 \begin{slide}
 	\begin{itemize}
-		\item Aujourd'hui les données que manipulent la machine sont \textbf{des nombres}
-		\item Manipulées sous forme \textbf{binaire} pour des contraintes matérielless:
+		\item Aujourd'hui les données que manipulent la machine sont \textbf{des nombres}.
+		\item Manipulées sous forme \textbf{binaire} pour des contraintes matérielles:
 			\begin{itemize}
 				\item Le courant passe ou ne passe pas.
 				\item Le métal est chargé ou non chargé.
@@ -106,8 +106,8 @@
 	\begin{itemize}
 		\item 1 unité minimale d'information (0/1) = 1 \textbf{bit}.
 		\item 8 \textbf{bits} forme 1 \textbf{octet}.
-		\item 1000~\textbf{octets} forment 1~\textbf{ko}
-		\item … bien que certains logiciels utilisent encore l'ancien usage 1 ko = 1024 octets.
+		\item 1000~\textbf{octets} forment 1~\textbf{ko}.
+		\item … bien que certains logiciels utilisent encore 1 ko = 1024 octets.
 	\end{itemize}
 \end{slide}
 
@@ -120,7 +120,8 @@
 			\item Nombres.
 			\item Chaînes de caractères.
 			\item Tableaux de données.
-			\item etc. Chaque langage de programmation propose ses propres types de données.
+			\item etc. 
+			\item Chaque langage de programmation propose ses propres types de données.
 		\end{itemize}
 	\end{itemize}
 \end{slide}
@@ -140,19 +141,19 @@
 	\begin{itemize}
 		\item Définir une liste de caractères : \textbf{jeu de caractères}.
 		\item Attribuer un nombre différent à chaque caractère : \textbf{jeu de caractères codés}.
-		\item Définir comment on stocke ces caractères : \textbf{codages des caractères}
+		\item Définir comment on stocke ces caractères : \textbf{codages des caractères}.
 	\end{itemize}
 \end{slide}
 
 \begin{slide}
 	\begin{itemize}
-		\item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : codage de caractères:
+		\item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : \textbf{codage de caractères}:
 			\begin{itemize}
 				\item Met fin à la multiplication des précédents codages.
-				\item Mais ne permet que de noter l'américain et les caractères informatiques de base (pas d'accents)
+				\item Mais ne permet que de noter l'américain et les caractères informatiques de base (pas d'accents).
 			\end{itemize}
 		\item Multiplication des encodages pour les langues non anglo-saxonnes.
-		\item \textbf{Unicode} (1993) : \textbf{jeu de caractères codés}
+		\item \textbf{Unicode} (1993) : \textbf{jeu de caractères codés}:
 			\begin{itemize}
 				\item Vise à couvrir tous les caractères anciens et modernes, y compris ceux non encore existants.
 				\item Peut s'implémenter sous différents \textbf{codages} : UTF-8, UTF-16, UTF-32.
@@ -237,38 +238,37 @@
 \end{slide}
 
 \begin{slide}
-\begin{columns}[T]
-	\begin{column}{0.25\textwidth}<.->
+
 		\beamerdefaultoverlayspecification{}
+		\only<+>{
 		\begin{exampleblock}{Directement dans le langage de programmation (ici Python)}
 			\inputminted{python}{exemples-structure/python.py}
 		\end{exampleblock}
-	\end{column}
-	\begin{column}{0.25\textwidth}
-		\beamerdefaultoverlayspecification{}
+		}
+
+		\only<+>{
 		\begin{exampleblock}{En \forme{eXtensible Markup Language} (XML)}
 			\inputminted{xml}{exemples-structure/xml.xml}
 		\end{exampleblock}
-	\end{column}
-	\begin{column}{0.25\textwidth}
-		\beamerdefaultoverlayspecification{}
+		}
+		
+		\only<+>{
 		\begin{exampleblock}{En \forme{YAML Ain't Markup Language}}
 			\inputminted{yaml}{exemples-structure/yaml.yaml}
 		\end{exampleblock}
-	\end{column}
-	\begin{column}{0.25\textwidth}
-		\beamerdefaultoverlayspecification{}
+		}
+		
+		\only<+>{
 		\begin{exampleblock}{En \forme{JavaScript Object Notation} (JSON)}
 			\inputminted{json}{exemples-structure/json.json}
 		\end{exampleblock}
-	\end{column}
-\end{columns}
+		}
 \end{slide}
 
 \subsubsection{Des bases de données relationelles}
 \begin{slide}
 	\begin{itemize}
-		\item On peut mettre des \textbf{données} dans des \textbf{fichiers} qu'on décrypte ensuite.
+		\item On peut mettre des \textbf{données} dans des \textbf{fichiers} qu'on décode ensuite.
 		\item Mais on peut aussi \textbf{faire abstraction} des fichiers pour ne se focaliser que sur les \textbf{données} et leurs \textbf{relations}.
 	\end{itemize}
 \end{slide}
@@ -290,7 +290,7 @@
 					\item Les relations entre les données ne sont pas principalement hiérarchiques.
 					\item On cherche plus à obtenir des données en fonctions de leur relations qu'à effectuer des manipulations dessus.
 					\item On connaît les contraintes des relations entre données (unicités…)
-					\item On veut chercher facilement la modification de plusieurs données
+					\item On veut gérer facilement la modification de plusieurs données en même temps.
 				\end{itemize}
 	\end{itemize}
 	
@@ -344,8 +344,8 @@
 	}
 	\end{exampleblock}
 	\only<+->{
-	\begin{exampleblock}{Requete}
-		\inputminted{sql}{exemple-structure/sql.sql}
+	\begin{exampleblock}{Requête}
+		\inputminted{sql}{exemples-structure/sql.sql}
 	\end{exampleblock}
 	}
 \end{slide}
