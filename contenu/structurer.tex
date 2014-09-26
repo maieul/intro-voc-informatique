@@ -99,7 +99,8 @@
 	% Quatrième ligne d'exemple																	
 	&\only<+->{\iff 10}
 \end{align*}
-\end{exampleblock}\end{slide}
+\end{exampleblock}
+\end{slide}
 
 \begin{slide}
 	\begin{itemize}
@@ -142,6 +143,7 @@
 		\item Définir comment on stocke ces caractères : \textbf{codages des caractères}
 	\end{itemize}
 \end{slide}
+
 \begin{slide}
 	\begin{itemize}
 		\item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : codage de caractères:
@@ -157,15 +159,16 @@
 			\end{itemize}
 	\end{itemize}
 \end{slide}
+
 \subsection{De la structuration}
-\begin{frame}
+\begin{slide}
 	\begin{itemize}
 		\item Acte n°1 de tout informaticien : penser la structure des données.
 		\item Exemple : faire une liste des ingrédients d'une recette de cuisine.
 	\end{itemize}
-\end{frame}
+\end{slide}
 
-\begin{frame}
+\begin{slide}
 
 \begin{columns}[T]
 	\begin{column}{0.25\textwidth}<.->
@@ -213,14 +216,14 @@
 		\end{exampleblock}
 	\end{column}
 \end{columns}
-\end{frame}
+\end{slide}
 
 \subsubsection{Des langages de descriptions}
 
-\begin{frame}
+\begin{slide}
 	\begin{itemize}
-		\item Une fois conçu la \texbf{structure des données} l'informaticien va pouvoir les \texbf{encoder} (ou les faire encoder…).
-		\item Il va pour cela utiliser un \texbf{langage de description}.
+		\item Une fois conçu la \textbf{structure des données} l'informaticien va pouvoir les \textbf{encoder} (ou les faire encoder…).
+		\item Il va pour cela utiliser un \textbf{langage de description}.
 		\item Qu'il choisira en fonction de critères tels que:
 			\begin{itemize}
 				\item Les outils disponibles pour manipuler ces langages.
@@ -231,50 +234,54 @@
 				\item Sa propre formation et ses a-prioris.
 			\end{itemize}
 	\end{itemize}
-\end{frame}
+\end{slide}
 
-\begin{frame}
+\begin{slide}
 \begin{columns}[T]
 	\begin{column}{0.25\textwidth}<.->
 		\beamerdefaultoverlayspecification{}
 		\begin{exampleblock}{Directement dans le langage de programmation (ici Python)}
 			\inputminted{python}{exemples-structure/python.py}
 		\end{exampleblock}
+	\end{column}
 	\begin{column}{0.25\textwidth}
 		\beamerdefaultoverlayspecification{}
 		\begin{exampleblock}{En \forme{eXtensible Markup Language} (XML)}
-			\inputminted{exemples-structures/xml.xml}
+			\inputminted{xml}{exemples-structure/xml.xml}
 		\end{exampleblock}
 	\end{column}
 	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
 		\begin{exampleblock}{En \forme{YAML Ain't Markup Language}}
-			\inputminted{exemples-structures/yaml.yaml}
+			\inputminted{yaml}{exemples-structure/yaml.yaml}
 		\end{exampleblock}
 	\end{column}
 	\begin{column}{0.25\textwidth}
+		\beamerdefaultoverlayspecification{}
 		\begin{exampleblock}{En \forme{JavaScript Object Notation} (JSON)}
-			\inputminted{exemples-structures/json.json}
+			\inputminted{json}{exemples-structure/json.json}
 		\end{exampleblock}
 	\end{column}
 \end{columns}
-\end{frame}
-\subsubsection{Des bases de données relationelles}
-\begin{frame}
-	\begin{itemize}
-		\item On peut mettre des \textbf{données} dans des \texbf{fichiers} qu'on décrypte ensuite.
-		\item Mais on peut aussi \texbf{faire abstraction} des fichiers pour ne se focaliser que sur les \texbf{données} et leurs \texbf{relations}.
-	\end{itemize}
-\end{frame}
+\end{slide}
 
-\begin{frame}
+\subsubsection{Des bases de données relationelles}
+\begin{slide}
 	\begin{itemize}
-		\item On utilise alors un \texbf{gestionnaire de bases de données}.
-		\item Qu'on manipule avec un \texbf{langage spécifique}.
+		\item On peut mettre des \textbf{données} dans des \textbf{fichiers} qu'on décrypte ensuite.
+		\item Mais on peut aussi \textbf{faire abstraction} des fichiers pour ne se focaliser que sur les \textbf{données} et leurs \textbf{relations}.
+	\end{itemize}
+\end{slide}
+
+\begin{slide}
+	\begin{itemize}
+		\item On utilise alors un \textbf{gestionnaire de bases de données}.
+		\item Qu'on manipule avec un \textbf{langage spécifique}.
 		\item Langage commun et standardisé : \enquote{Structured Query Language} (SQL).
 	\end{itemize}
-\end{frame}
+\end{slide}
 
-\begin{frame}
+\begin{slide}
 	\begin{itemize}
 				\item Langage déclaratif.
 				\item Pertinents dans certains contextes notamment quand :
@@ -287,8 +294,8 @@
 				\end{itemize}
 	\end{itemize}
 	
-
-\begin{frame}
+\end{slide}
+\begin{slide}
 	
 	\beamerdefaultoverlayspecification{}
 	\scriptsize
@@ -341,5 +348,5 @@
 		\inputminted{sql}{exemple-structure/sql.sql}
 	\end{exampleblock}
 	}
-\end{frame}
-\end{frame}
+\end{slide}
+
