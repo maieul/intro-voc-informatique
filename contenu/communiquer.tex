@@ -1,10 +1,22 @@
-\section[Communiquer]{Communiquer entre ordinateur} % Prendre le modèle TCP/IP en 4 couches, qu'on simplifie en 3 le but n'est pas de faire un cours sur le sujet https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet
+\section[Communiquer]{Communiquer entre ordinateurs} % Prendre le modèle TCP/IP en 4 couches, qu'on simplifie en 3 le but n'est pas de faire un cours sur le sujet https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet
+
+% FIXME
+% je pense que cette section est floue, beaucoup de technique, et à la fin je ne vois pas le message que tu veux qu'on en retienne
+% 
+% idem que la section précédente, j'aimerais voir une sorte de coupe à travers les niveaux d'abstraction, pour faire réfléchir les gens
+% ex:
+% - on veut transmettre une information à quelqu'un d'autre (choix du fond)
+% - il faut choisir la forme (visuel, son, texte, présentation, roman, film)
+% - et un medium de transmission (en personne, la poste, téléphone…)
+% tu peux faire une analogie avec le code morse, qui marche sur plusieurs supports physiques: son, lumière visible, électricité
+
+
 \subsection{Le modèle des couches}
 \begin{frame}
 	\begin{itemize}
 		\item Un réseau informatique est ensemble d'équipement reliés entre eux pour échanger de l'information.
-		\item Le modèle \textbf{\formeenglish{Open System Interconnexion}} propose un standard en \textbf{7 couche}.
-		\item Mais on simplifiera ici à \textbf{3 couches}.
+		\item Le modèle \textbf{\formeenglish{Open System Interconnexion}} propose un standard en \textbf{7 couches}.
+		\item Mais on simplifiera ici à \textbf{3 couches}. % FIXME lesquelles ? et elles devraient apparaître explicitement par la suite
 		
 	\end{itemize}
 \end{frame}
@@ -12,7 +24,8 @@
 
 \begin{frame}
 	\begin{itemize}
-		\item Deux humains qui communiquent utilise un support physique pour le faire : 			\begin{itemize}
+		\item Deux humains qui communiquent utilise un support physique pour le faire :
+ 			\begin{itemize}
 				\item Son. 
 				\item Signaux de fumées.
 				\item Gestes.
@@ -28,7 +41,10 @@
 		\item Notamment les normes \textbf{ethernet}.
 	\end{itemize}
 \end{frame}
+
+
 \subsection{Mettre en réseau}
+
 \begin{frame}
 	\begin{itemize}
 		\item Pour s'avoir à qui on écrit on utilise une adresse.
@@ -58,12 +74,12 @@
 
 \begin{frame}
 	\begin{itemize}
-		\item Pour éviter de retenir les adresses IP on a inventé (1983) le \textbf{nom de domaines}.
+		\item Pour éviter de retenir les adresses IP on a inventé (1983) le \textbf{nom de domaine}.
 		\item Les domaines fonctionnent de manière hiérarchiques.
 		\begin{description}
-			\item[Premier niveau (TLD)] : extensions (\url{.fr}, \url{.org}).
-			\item[Second niveau] : domaines (\url{wikipedia.org}, \url{unil.ch}).
-			\item[Troisième niveau] : sous-domaine (\url{fr.wikipedia.org}).
+			\item[Premier niveau (TLD)] : extensions (\url{.fr}, \url{.org}). % FIXME nombre limité, gérés par des entités (AFNIC…) imposant des règles -> explique .name, .org, .fr…
+			\item[Second niveau] : domaines (\url{wikipedia.org}, \url{unil.ch}). % FIXME loué par l'éditeur du site
+			\item[Troisième niveau] : sous-domaine (\url{fr.wikipedia.org}). % sous le contrôle du site
 			\item etc.
 		\end{description}
 	\end{itemize}
@@ -104,13 +120,13 @@
 		\item Décrite en \formeenglish{HyperText Markup Language} (HTML).
 		\item Mise en forme via \formeenglish{Cascading Style Sheets} (CSS).
 		\item Complétée par du multimédia.
-		\item Animée via \formeenglish{JavaScript}.
+		\item Animée via \formeenglish{JavaScript}. % FIXME en fait tu peux dire qu'une page web suffisemment complexe est un logiciel à part entière
 	\end{itemize}
 
 \end{frame}
 
 \begin{frame}
-	Deux types :
+	Deux types : % est-ce bien important ?
 	\begin{itemize}
 		\item Statiques.
 		\item Dynamiques.
@@ -118,7 +134,7 @@
 			\item Logiciel de forums.
 			\item Logiciel de Wiki.
 			\item Logiciels de gestion de contenu (SPIP, WordPress, Drupal)
-			\item etc.
+			\item etc. % mes parents voient pas la distinction entre web et mail, puisqu'ils utilisent GMail. Ils voient pas l'intérêt d'un client mail natif, par exemple
 		\end{itemize} 
 	\end{itemize}
 \end{frame}

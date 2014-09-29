@@ -3,7 +3,7 @@
 
 \begin{slide}
 	\begin{itemize}
-		\item[1950] Premier ordinateur à transitors.
+		\item[1950] Premier ordinateur à transistors.
 		\item[1970] Premier ordinateur à microprocesseur. % Actuellement (2012, de l'ordre du milliard), gravé de l'ordre de de la dizaine de nanomètre, soit 10 000em de cheveux
 	\end{itemize}
 \end{slide}
@@ -11,7 +11,7 @@
 \begin{slide}
 	\begin{itemize}
 		\item Le processeur traite les données.
-		\item Il est composé de plusieurs transitors, avec des fonctions spécialisées.
+		\item Il est composé de plusieurs transistors, avec des fonctions spécialisées.
 		\item Il possède un jeu d'instruction spécifique.
 		\item Chaque instruction est codée en binaire.
 	\end{itemize}
@@ -32,6 +32,12 @@
 			\item C (et ses dérivés [C++,C\# etc.]?)
 		\end{itemize}
 		\item Des langages \textbf{interprétés} de haut niveau:
+                  % FIXME: la distinction compilé/interprété n'a aucun intérêt (et en l'occurence, Java est compilé)
+                  % il vaut mieux illustrer le niveau d'abstraction dont on dispose avec chaque langage:
+                  % très bas niveau: contrôle matériel de la machine
+                  % bas niveau: contrôle précis des mécanismes d'exécution
+                  % haut niveau: facilité d'expression d'un algorithme, portabilité
+                  % sql, prolog: facilité d'expression d'un problème et de sa solution
 		\begin{itemize}
 			\item Java
 			\item PHP
@@ -76,11 +82,16 @@
 	\small
 	\begin{itemize}
 		\item[Algorithme] : série d'instructions à fournir à l'ordinateur.
-		\item[Programme] : mise en forme numérique de ces instructions. 
-		\item[Fonction] : unité logique dans un programme.
-		\item[Script] : programme en langage interprété.
-		\item[Logiciel] : suite de programme et d'outils pour le faire fonctionner (images, réglages etc.)
-		\item[Application] : logiciel utilisé pour réaliser une activité.
+                  % FIXME: pas vraiment: l'algo c'est la structuration logique de comment faire le traitement.
+                  % FIXME: on a l'exemple de la liste de courses depuis tout à l'heure, et pas l'algo / recette de cuisine correspondante ?
+		\item[Programme] : mise en forme numérique de ces instructions. % FIXME: expression d'un algorithme sous une forme consommable par un ordi
+		\item[Fonction] : unité logique dans un programme. % FIXME: fonction, ou routine, sous-programme "faire un roux, une béchamelle" = réutilisation d'une recette simple comme partie d'une recette plus complexe
+		\item[Script] : programme en langage interprété. % FIXME: sans intérêt, parle d'automatisation de tâches adhoc, ou de facilité d'expression
+		\item[Logiciel] : suite de programmes et d'outils pour le faire fonctionner (images, réglages etc.)
+		\item[Application] : logiciel utilisé pour réaliser une activité. % sous-entend un produit commercial ou non
 		\item En pratique \textbf{programme}, \textbf{logiciel} et \textbf{application} sont souvent interchangeables.
 	\end{itemize}
+
+% FIXME préciser la place du système d'exploitation ?
+
 \end{slide}
