@@ -1,14 +1,5 @@
 \section[Communiquer]{Communiquer entre ordinateurs} % Prendre le modèle TCP/IP en 4 couches, qu'on simplifie en 3 le but n'est pas de faire un cours sur le sujet https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet
 
-% FIXME
-% je pense que cette section est floue, beaucoup de technique, et à la fin je ne vois pas le message que tu veux qu'on en retienne
-% 
-% idem que la section précédente, j'aimerais voir une sorte de coupe à travers les niveaux d'abstraction, pour faire réfléchir les gens
-% ex:
-% - on veut transmettre une information à quelqu'un d'autre (choix du fond)
-% - il faut choisir la forme (visuel, son, texte, présentation, roman, film)
-% - et un medium de transmission (en personne, la poste, téléphone…)
-% tu peux faire une analogie avec le code morse, qui marche sur plusieurs supports physiques: son, lumière visible, électricité
 
 
 \subsection{Le modèle des couches}
@@ -17,10 +8,14 @@
 		\item Un réseau informatique est ensemble d'équipement reliés entre eux pour échanger de l'information.
 		\item Le modèle \textbf{\formeenglish{Open System Interconnexion}} propose un standard en \textbf{7 couches}.
 		\item Mais on simplifiera ici à \textbf{3 couches}. % FIXME lesquelles ? et elles devraient apparaître explicitement par la suite
-		
+		\begin{itemize}
+			\item<.->Transmission physique de l'information.
+			\item<.->Acheminement au bon destinataire.
+			\item<.->Contenu et structure des échanges.
+		\end{itemize}		
 	\end{itemize}
 \end{frame}
-\subsection{Un support physique}
+\subsection{Transmission physique de l'information}
 
 \begin{frame}
 	\begin{itemize}
@@ -43,7 +38,7 @@
 \end{frame}
 
 
-\subsection{Mettre en réseau}
+\subsection{Acheminement au bon destinataire}
 
 \begin{frame}
 	\begin{itemize}
@@ -85,7 +80,7 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Que fait-on?}
+\subsection{Contenu et structure des échanges} 
 
 \begin{frame}
 	\begin{itemize}
