@@ -113,32 +113,7 @@ Deux postulats de l'informatique:
 
 \begin{slide}
 	\begin{itemize}
-		\item Un ordinateur est une réalisation concrète d'une \textbf{machine de Turing universelle} (1936):
-                        % FIXME: hmm non… la machine de Turing est un modèle mathématique, un outil de preuve, qui sert à exprimer et comprendre la puissance expressive d'un ordinateur. Les ordinateurs n'en sont pas une réalisation (ou alors c'est tellement indirect que ça ne veut plus dire grand chose). Par exemple, les systèmes suivant l'architecture Harvard stockent programme et données dans deux mémoires différentes (par opposition à l'architecture Von Neumann). Il y a d'autres architectures, éventuellement on peut mettre la machine de Turing dedans comme exemple ridiculement inefficace, mais c'est tout.
-			\begin{itemize}
-				\item Un ruban divisé en cases contenant de l'information notés sous forme d'alphabet (par ex : 0/1).
-				\item Une tête de lecture/écriture :
-					\begin{itemize}
-						\item Lit ou écrit sur une case à la fois.
-						\item Peut se déplacer sur le ruban, vers la gauche ou la droite.
-					\end{itemize}
-				\item Un registre d'état mémorisant l'état courant de la machine.
-				\item Une table d'actions qui détermine :
-					\begin{itemize}
-						\item Qu'écrire sur la case courante.
-						\item Dans quel sens déplacer la tête de lecture.
-						\item Comment modifier le registre d'état.
-					\end{itemize}
-				\item Puisque la machine est \textbf{universelle} la table d'action modifiable : elle est elle-même écrite sur le ruban.
-			\end{itemize}
-	
-		\item C'est donc la réalisation du second postulat de l'informatique : on peut automatiser une série d'opération de transformation de données.
-	\end{itemize}
-\end{slide}
-
-\begin{slide}
-	\begin{itemize}
-		\item Plus simplement un ordinateur est une machine qui peut :
+		\item Un ordinateur est une machine qui peut :
 			\begin{itemize}
 				\item Lire des \textbf{données}. 
 				\item Manipuler les données en fonctions d'\textbf{instructions} :
