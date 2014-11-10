@@ -12,3 +12,46 @@
 }
 \newcommand{\titretableau}[1]{\textsc{\emph{\textbf{#1}}}}
 \newcommand{\titrecolonne}[1]{\textbf{#1}}
+
+% La commande qui permet de tracer ce petit table
+
+% D'abord des commandes préalable
+\usepackage{tikz}
+\pgfmathsetmacro{\rapport}{sqrt(2)}
+
+\pgfmathsetmacro\xi{0}
+\pgfmathsetmacro\xiv{0.75}
+\pgfmathsetmacro\xii{(\xiv-\xi)/3}
+\pgfmathsetmacro\xiii{\xii*2}
+
+\pgfmathsetmacro\yi{0}
+\pgfmathsetmacro\yiv{-\xiv/\rapport}
+\pgfmathsetmacro\yii{(\yiv-\xi)/3}
+\pgfmathsetmacro\yiii{2*\yii}
+% Et là, la commande qui nous intéresse
+\newcommand\position[2]{
+	\vfill
+	\strut\hfill
+  \begin{tikzpicture}[scale=2] % Largeur = 1,4 fois hauteur (proportion de feuilles de papier, arrondi)
+    \pgfmathsetmacro\x{(#1-1)*\xii-\xi}
+    \pgfmathsetmacro\y{(#2-1)*\yii-\yi}
+																									% Lignes horizontales
+    \draw(\xi,\yi)--(\xiv,\yi);
+    \draw(\xi,\yii)--(\xiv,\yii);
+    \draw(\xi,\yiii)--(\xiv,\yiii);
+    \draw(\xi,\yiv)--(\xiv,\yiv);
+
+																																	% Lignes verticales
+
+    \draw(\xi,\yi)--(\xi,\yiv);
+    \draw(\xii,\yi)--(\xii,\yiv);
+    \draw(\xiii,\yi)--(\xiii,\yiv);
+    \draw(\xiv,\yi)--(\xiv,\yiv);
+
+																																									% Positionnement du cadre
+
+    \draw[fill=black] (\x,\y) rectangle (\xii+\x,\yii+\y);
+  \end{tikzpicture}
+  \vspace{\baselineskip}
+}
+
