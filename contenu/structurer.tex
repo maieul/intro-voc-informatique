@@ -57,107 +57,102 @@
 % puis poser la question "oui mais les accents ? le chinois ?" et introduire les autres codages puis unicode en disant juste que c'est une table bien plus grande
 % montrer l'encodage d'un mot en unicode et expliquer le problème typique quand on interprète un nombre avec la mauvaise table
 \begin{slide}
-	\begin{itemize}
-		\item Manipuler des chaînes de caractères est un des usages courants de l'informatique.
-		\item D'autant plus qu'il est plus facile pour un humain d'utiliser des mots que des nombres pour :
-			\begin{itemize}
-				\item Représenter les données.
-				\item Représenter les instructions.
-			\end{itemize}
-		\item Associer un nombre à un caractère.
-	\end{itemize}
+  \begin{itemize}
+    \item Manipuler des chaînes de caractères est un des usages courants de l'informatique.
+    \item Associer un nombre à un caractère.
+  \end{itemize}
 \end{slide}
 
 \begin{slide}
-	\begin{itemize}
-		\item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : \textbf{codage de caractères}:
-			\begin{itemize}
-				\item Met fin à la multiplication des précédents codages.
-				\item Mais ne permet que de noter l'américain et les caractères informatiques de base (pas d'accents).
-			\end{itemize}
-		\item Multiplication des encodages pour les langues non anglo-saxonnes.
-		\item \textbf{Unicode} (1993) : \textbf{jeu de caractères codés}:
-			\begin{itemize}
-				\item Vise à couvrir tous les caractères anciens et modernes, y compris ceux non encore existants.
-				\item Peut être implémenté sous différents \textbf{codages} : UTF-8, UTF-16, UTF-32.
-			\end{itemize}
-	\end{itemize}
+  \begin{itemize}
+    \item \textbf{ASCII} (1963), \formeenglish{American Standard Code for Information Interchange} : \textbf{codage de caractères}:
+      \begin{itemize}
+	\item Met fin à la multiplication des précédents codages.
+	\item Mais ne permet que de noter l'américain et les caractères informatiques de base (pas d'accents).
+      \end{itemize}
+    \item Multiplication des encodages pour les langues non anglo-saxonnes.
+    \item \textbf{Unicode} (1993) : \textbf{jeu de caractères codés}:
+      \begin{itemize}
+	\item Vise à couvrir tous les caractères anciens et modernes, y compris ceux non encore existants.
+	\item Peut être implémenté sous différents \textbf{codages} : UTF-8, UTF-16, UTF-32.
+      \end{itemize}
+  \end{itemize}
 \end{slide}
 
 \subsection{De la structuration}
 \begin{slide}
-	\begin{itemize}
-		\item Acte n°1 de tout informaticien : penser la structure des données.
-		\item Exemple : faire une liste des ingrédients d'une recette de cuisine.
-	\end{itemize}
+  \begin{itemize}
+    \item Acte n°1 de tout informaticien : penser la structure des données.
+    \item Exemple : faire une liste des ingrédients d'une recette de cuisine.
+  \end{itemize}
 \end{slide}
 
 \begin{slide}
 
-\begin{columns}[T]
-	\begin{column}{0.25\textwidth}<.->
-		\beamerdefaultoverlayspecification{}
-		\begin{exampleblock}{En vrac}
-		3 kilos de patates ; 5 choux rouges ; radis : une botte
-		\end{exampleblock}	
-	\end{column}
-	
-	\begin{column}{0.25\textwidth}
-		\beamerdefaultoverlayspecification{}
-		\begin{exampleblock}{Ingrédient/Qt.}
-			\begin{itemize}
-				\item Patates : 3~kg.
-				\item Choux rouges : 5.
-				\item Radis : 1~botte.
-			\end{itemize}
-		\end{exampleblock}
-	\end{column}
-	
-	\begin{column}{0.25\textwidth}
-		\beamerdefaultoverlayspecification{}
-		\begin{exampleblock}{Ing./Unit./Qt.}
-			\begin{itemize}
-				\item Patates / 3 / kg
-				\item Choux rouges / 5 / $\varnothing$\
-				\item Radis / 1 / botte
-			\end{itemize}
-		\end{exampleblock}
-	\end{column}
-	\begin{column}{0.25\textwidth}
-		\beamerdefaultoverlayspecification{}
-		\begin{exampleblock}{Avec deux listes}
-			\begin{itemize}
-				\item Patates : 3
-				\item Choux rouges : 5
-				\item Radis : 1
-			\end{itemize}
-			\hrule width \textwidth
-			\begin{itemize}
-				\item Patates : kg
-				\item Choux rouges : $\varnothing$\
-				\item Radis : botte
-			\end{itemize}
-		\end{exampleblock}
-	\end{column}
-\end{columns}
+  \begin{columns}[T]
+    \begin{column}{0.25\textwidth}<.->
+      \beamerdefaultoverlayspecification{}
+      \begin{exampleblock}{En vrac}
+	3 kilos de patates ; 5 choux rouges ; radis : une botte
+      \end{exampleblock}	
+    \end{column}
+
+    \begin{column}{0.25\textwidth}
+      \beamerdefaultoverlayspecification{}
+      \begin{exampleblock}{Ingrédient/Qt.}
+	\begin{itemize}
+	  \item Patates : 3~kg.
+	  \item Choux rouges : 5.
+	  \item Radis : 1~botte.
+	\end{itemize}
+      \end{exampleblock}
+    \end{column}
+
+    \begin{column}{0.25\textwidth}
+      \beamerdefaultoverlayspecification{}
+      \begin{exampleblock}{Ing./Unit./Qt.}
+	\begin{itemize}
+	  \item Patates / 3 / kg
+	  \item Choux rouges / 5 / $\varnothing$\
+	  \item Radis / 1 / botte
+	\end{itemize}
+      \end{exampleblock}
+    \end{column}
+    \begin{column}{0.25\textwidth}
+      \beamerdefaultoverlayspecification{}
+      \begin{exampleblock}{Avec deux listes}
+	\begin{itemize}
+	  \item Patates : 3
+	  \item Choux rouges : 5
+	  \item Radis : 1
+	\end{itemize}
+	\hrule width \textwidth
+	\begin{itemize}
+	  \item Patates : kg
+	  \item Choux rouges : $\varnothing$\
+	  \item Radis : botte
+	\end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
 \end{slide}
 
 \subsubsection{Des langages de description}
 
 \begin{slide}
-	\begin{itemize}
-		\item Une fois conçue la \textbf{structure des données} l'informaticien va pouvoir les \textbf{encoder} (ou les faire encoder…).
-		\item Il va pour cela utiliser un \textbf{langage de description}.
-		\item Qu'il choisira en fonction de critères tels que:
-			\begin{itemize}
-				\item Les outils disponibles pour manipuler ces langages.
-				\item La verbosité du langage.
-				\item La diffusion du langage.
-				\item L'interopérabilité qu'il souhaite avec d'autres outils.
-				\item etc.
-				\item Sa propre formation et ses a-prioris.
-			\end{itemize}
-	\end{itemize}
+  \begin{itemize}
+    \item Une fois conçue la \textbf{structure des données} l'informaticien va pouvoir les \textbf{encoder} (ou les faire encoder…).
+    \item Il va pour cela utiliser un \textbf{langage de description}.
+    \item Qu'il choisira en fonction de critères tels que:
+      \begin{itemize}
+	\item Les outils disponibles pour manipuler ces langages.
+	\item La verbosité du langage.
+	\item La diffusion du langage.
+	\item L'interopérabilité qu'il souhaite avec d'autres outils.
+	\item etc.
+	\item Sa propre formation et ses a-prioris.
+      \end{itemize}
+  \end{itemize}
 \end{slide}
 
 \begin{slide}
