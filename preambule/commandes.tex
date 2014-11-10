@@ -22,9 +22,18 @@
 \pgfmathsetmacro\yiii{2*\yii}
 % Et là, la commande qui nous intéresse
 \newcommand\position[2]{
-	\vfill
-	\strut\hfill
-  \begin{tikzpicture}[scale=2] % Largeur = 1,4 fois hauteur (proportion de feuilles de papier, arrondi)
+		\vskip 0pt plus 1filll\hfill
+		\positiontab{#1}{#2}
+		\vspace{\baselineskip}
+}
+\newcommand{\positiondansliste}[2]{
+	\hfill\begin{minipage}{0.1\textwidth}
+	\positiontab{#1}{#2}
+	\end{minipage}
+}
+\newcommand\positiontab[2]{
+  \begin{tikzpicture}[baseline=(a.north),scale=2] % Largeur = 1,4 fois hauteur (proportion de feuilles de papier, arrondi)
+    \coordinate (a) at (0,0);
     \pgfmathsetmacro\x{(#1-1)*\xii-\xi}
     \pgfmathsetmacro\y{(#2-1)*\yii-\yi}
 																									% Lignes horizontales
@@ -44,6 +53,5 @@
 
     \draw[fill=black] (\x,\y) rectangle (\xii+\x,\yii+\y);
   \end{tikzpicture}
-  \vspace{\baselineskip}
 }
 
