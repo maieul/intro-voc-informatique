@@ -4,7 +4,7 @@ ingredients = {
     "radis":1
 }
 
-unites_ingredients     ={
+unites_ingredients = {
     "patates":"kg",
     "choux rouges":None,
     "radis":"botte"
